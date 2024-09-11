@@ -1,2 +1,4 @@
 # FiHack---analysis-of-fixed-income-portfolio
 This product aims to analyze the performance and risk profile of a company's fixed income security portfolio.
+
+The objective of this project is to develop understanding of the concept of time value of money, fixed income securities and markets as well as interest rate derivatives. We study valuation and hedging using these instruments and discuss how these methods are used in practice. Furthermore, we demonstrate how to apply different models for construction of yield curves, valuation and hedging using interest rate derivatives and estimating expected bond returns. For the present this project works as an informative space for clients to come and and understand the basics of what these securities are the evaluation process. While providing basic results.  
