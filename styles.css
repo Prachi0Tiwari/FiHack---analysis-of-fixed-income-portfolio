@@ -1,0 +1,526 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+    color: white;
+    
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: #ff9900;
+}
+
+/* Add to the existing CSS */
+/* Animated Gradient Background */
+.animated-background {
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    background: url('nightscapes.jpg') repeat-x; /* Replace with an actual URL for a cityscape image */
+    background-size: cover;
+    animation: moveCityscape 30s linear infinite;
+    z-index: -1;
+}
+
+/* Cityscape Animation */
+@keyframes moveCityscape {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Container for Left-Right Layout */
+.container {
+    width: 100%;
+    max-width: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #100a0a;
+    padding: 20px;
+    position: relative;
+    height: 1050px;
+}
+
+/* Introduction Section */
+.intro {
+    width: 45%;
+    margin: 40px auto; /* Centers and moves intro down from the top */
+    padding: 20px; /* Adds space inside the intro to pull it away from the edges */
+    animation: fadeInLeft 1.5s ease forwards;
+    opacity: 0;
+    
+}
+
+.title {
+    font-size: 4rem;
+    margin-bottom: 5%;
+    text-align: center;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    ttext-shadow: 0px 0px 20px rgba(174, 144, 141, 0.7), 0px 0px 30px rgba(209, 227, 230, 0.6); /* Glow effect */
+    animation: fadeInTitle 1.5s ease forwards;
+    opacity: 0;
+}
+
+.description {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.get-started {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #92b9d2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.get-started:hover {
+    background-color: #2980b9;
+}
+
+
+/* Calculator Section */
+.calculator {
+    width: 45%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInRight 1.5s ease forwards;
+    opacity: 0;
+}
+
+.calculator h2 {
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    background-color: #222;
+    color: #eee;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Details Button */
+.details-button {
+    background-color: #2ecc71;
+}
+
+.details-button:hover {
+    background-color: #27ae60;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes fadeInButton {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Product Section */
+.product-section {
+    padding: 2rem;
+    background-color: rgb(255, 146, 43);
+    text-align: center;
+    height: 900px;
+}
+
+.product-section h2 {
+    margin-bottom: 2rem;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: rgba(255, 255, 255, 0.618);
+    padding: 5rem;
+    margin: 10rem;
+    height: 500px;
+    width: 70%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;    /* Make the image fill the width of the container */
+    height: auto;   /* Keep the aspect ratio */
+    border-radius: 5px; /* Optional: adds rounded corners to the image */
+    margin-bottom: 1rem; /* Space between the image and the rest of the content */
+}
+
+
+
+
+
+.product-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #333;
+    text-decoration: none;
+    background-color: #ff9900;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 5px;
+}
+
+.product-link:hover {
+    background-color: #e68a00;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+/* Add styles for filter buttons */
+.filter-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    background-color: #ff9900;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.filter-btn:hover {
+    background-color: #e68a00;
+}
+
+/* Styling buttons */
+.cta-button, .filter-btn {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover, .filter-btn:hover {
+    background-color: #e68a00;
+}
+
+/* Product card styling */
+.product-card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+.product-image {
+    width: 30%;    /* Make the image fill the width of the container */
+    height: auto;   /* Keep the aspect ratio */
+    border-radius: 5px; /* Optional: adds rounded corners to the image */
+    margin-bottom: 1rem; /* Space between the image and the rest of the content */
+}
+
+/* Responsive grid layout */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin: 50px 40px 20px;
+    
+}
+
+/* Hero section styling */
+.hero {
+    background-image: url('graph.jpeg');
+    height: 1000px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero .cta-button {
+    font-size: 18px;
+    padding: 15px 30px;
+}
+
+.bond-price {
+    font-size: 1.5em;          /* Larger font size for emphasis */
+    font-weight: bold;         /* Make the text bold */
+    color: #4CAF50;            /* Green color for positive indication */
+    margin: 10px 0;           /* Margin for spacing */
+}
+
+/* Optional style for a negative state */
+.bond-price.negative {
+    color: #F44336;            /* Red color for negative change */
+}
+
+/* Additional specific styles if needed (optional) */
+.card p.bond-price {
+    font-size: 1.2em;         /* Default size for bond price inside cards */
+}
+
+.card-container {
+    background-color: rgb(255, 125, 78);
+    display: flex;                     /* Use flexbox for layout */
+    flex-wrap: wrap;                  /* Allow wrapping of cards */
+    justify-content: center;          /* Center cards */
+    margin-top: 20px;                 /* Space above cards */
+}
+
+.card {
+    border: 1px solid #ccc;           /* Light gray border */
+    border-radius: 5px;               /* Rounded corners */
+    padding: 20px;                    /* Inner padding */
+    margin: 10px;                     /* Margin between cards */
+    width: 200px;                     /* Fixed width for cards */
+    text-align: center;               /* Center text in cards */
+    transition: transform 0.2s;       /* Smooth scale effect on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.card:hover {
+    transform: scale(1.05);           /* Slightly enlarge card on hover */
+}
+
+.bond-price {
+    font-size: 1.5em;                  /* Larger font size for emphasis */
+    font-weight: bold;                 /* Make the text bold */
+    color: #4CAF50;                    /* Green color for positive indication */
+    margin: 10px 0;                   /* Margin for spacing */
+}
+
+
+.bond-prices details-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Responsive for smaller devices */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .filter-section, .products {
+        padding: 0 10px;
+    }
+}
+
+.loading {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff9900;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 50px;
+    display: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-top:hover {
+    background-color: #e68a00;
+}
+
+.scroll-top.show {
+    display: block;
+}
+
+
+/* Analysis Section Styling */
+.analysis-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 1000px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 50px;
+    overflow: hidden;
+    background-image: url('graph.jpeg'); /* Set the graph background image here */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background */
+    background-attachment: fixed; /* Make the background fixed while scrolling */
+}
+
+.analysis-content {
+    z-index: 2;
+    color: black;
+    max-width: 40%;
+    margin-left: 50px;
+}
+
+.analysis-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.analysis-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 12px 30px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e68a00;
+}
+
+
+
