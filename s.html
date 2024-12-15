@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Bonds - Financial Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <a href="#" class="scroll-top">Top</a>
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>FiHack Bonds</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+
+    <!-- Background Overlay for Animation -->
+    <div class="animated-background"></div>
+    
+    <!-- Main Content Wrapper -->
+    <div class="container">
+        <!-- Introduction Section on the Left -->
+        <div class="intro">
+            <h1 class="title">FiHACK</h1>
+            <p class="description">
+                Welcome to FiHack! Calculate the price of your fixed-income securities effortlessly. Enter the principal, interest rate, and years to maturity, and let us do the rest!
+            </p>
+            <button class="get-started">Get Started</button>
+        </div>
+        
+        <!-- Calculator Section on the Right -->
+        <div class="calculator">
+            <h2>Fixed Income Security Calculator</h2>
+            <label for="principal">Principal Amount ($):</label>
+            <input type="number" id="principal" placeholder="Enter principal amount">
+            
+            <label for="years">Years to Maturity:</label>
+            <input type="number" id="years" placeholder="Enter years to maturity">
+            
+            <label for="rate">Interest Rate (%):</label>
+            <input type="number" id="rate" placeholder="Enter annual interest rate">
+            
+            <label for="couponRate">Coupon Rate (%):</label>
+            <input type="number" id="couponRate" required>
+
+            <button onclick="calculatePrice()">Calculate Price</button>
+            <div id="result"></div>
+            
+            <!-- Button to open the detailed explanation page -->
+            <button onclick="openDetails()" class="details-button">View Detailed Explanation</button>
+        </div>
+    </div>
+
+    <!-- Bond Filter Section -->
+    <section class="filter-section">
+        <h2>Filter Bonds</h2>
+        <button class="filter-btn" data-type="all">All Bonds</button>
+        <button class="filter-btn" data-type="government">Government Bonds</button>
+        <button class="filter-btn" data-type="corporate">Corporate Bonds</button>
+        <button class="filter-btn" data-type="municipal">Municipal Bonds</button>
+        <button class="filter-btn" data-type="savings">Savings Bonds</button>
+    </section>
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <h2>Popular Bonds</h2>
+        <div class="products">
+
+
+            <!-- Bonds will be inserted here by JavaScript -->
+        </div>
+
+    </section>
+    <section class="bond-prices">
+        <h1>Real-Time Bond Prices</h1>
+
+    <!-- Slider Section -->
+    <div class="slider-container">
+        <h2>Select a Bond</h2>
+        <input type="range" class="slider" min="0" max="4" value="0" id="bondSlider">
+    </div>
+
+    <div class="display">
+        <h3 id="sliderBondName">Company: Company A</h3>
+        <p id="sliderBondPrice">Current Price: $100.00</p>
+        <p id="sliderBondChange">Change: +0.50 (0.50%)</p>
+    </div>
+
+    <!-- Card Section -->
+    <h2>Bond Cards</h2>
+    <div class="card-container" id="cardContainer"></div>
+
+    <div class="details" id="details">
+        <h3>Bond Details</h3>
+        <p id="bondDetails"></p>
+    </div>
+
+    </section>
+    
+    <!-- Section Below Popular Bonds -->
+    <section class="analysis-section">
+        <div class="analysis-content">
+            <h2>Explore Fixed Income Securities</h2>
+            <p>Discover the benefits of fixed income securities, understand their role in your portfolio, and explore analysis that helps you make informed decisions.</p>
+            <a href="fixed-income-security.html" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 India Bonds. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
